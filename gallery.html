@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <link rel="stylesheet" href="gallerystyle.css">
+    <meta charset="utf-8">
+    <title>Website design of gallery</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <img src="galleryimages/logo.png" alt="">
+        <nav>
+          <ul>
+            <li><a href="#"></a>Home</li>
+            <li><a href="#"></a>Office</li>
+            <li><a href="#"></a>Hotels</li>
+            <li><a href="#"></a>Contact us</li>
+          </ul>
+        </nav>
+        <img src="galleryimages/menu.png" alt="" class="manu-icon">
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="textbox">
+            <h5>Our products</h5>
+            <h1><b>Simplicity</b><br> is the ultimate <b>Sophistication</b></h1>
+           </div>
+           <img src="galleryimages/circle.png" class="small-icon1" alt="">
+           <img src="galleryimages/circle.png" class="small-icon2" alt="">
+           <img src="galleryimages/square.png" class="small-icon3" alt="">
+        </div>
+         <div class="col">
+            <div class="gallery-box">
+              <img src="galleryimages/pic2.jpg" id="gallery">
+              <ul>
+                <li class="btn">01</li>
+                <li class="btn active">02</li>
+                <li class="btn">03</li>
+                <li class="btn">04</li>
+              </ul>
+</div>
+        </div>
+
+      </div>
+<img src="galleryimages/circle.png"  class="small-icon4" alt="">
+<img src="galleryimages/square.png"  class="small-icon5" alt="">
+
+</div>
+    <script type="text/javascript">
+      var btn = document.getElementByClassName("btn");
+      var gallery = document.getElementById("gallery");
+
+      var images = new Array(
+      "galleryimages/pic1.jpg",
+      "galleryimages/pic2.jpg",
+      "galleryimages/pic3.jpg",
+      "galleryimages/pic4.jpg"
+    );
+
+    for(let i=0;i<btn.length; i++){
+      btn[i].onclick = function(){
+        gallery.src=images[i];
+        let current = document.getElementByClassName("active");
+        current[0].className = current.className.replace("active","");
+        this.className += "active";
+      };
+    }
+
+    </script>
+  </body>
+</html>
